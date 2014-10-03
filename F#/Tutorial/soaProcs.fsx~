@@ -1,6 +1,0 @@
-#light
-
-open System
-
-let res = [2;1;2]
-let pet = [1;0;1]
