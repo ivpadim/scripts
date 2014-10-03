@@ -8,8 +8,9 @@ then
 fi
 
 archivo=$1
+echo $archivo
 
-if [-f $archivo ];
+if [ -f $archivo ];
 then
 	encontrado=$(cat $archivo| grep Linux)
 
