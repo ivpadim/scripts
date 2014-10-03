@@ -1,0 +1,18 @@
+David		99
+Linda		32
+Pablo		67
+Fernando	53
+Carlos		49
+Alonso		29
+Sergio		64
+Jose		14
+Diego		88
+Graciela	61
+Sergio		80
+Adrian		73
+Leon		23
+Mario		97
+Luis		82
+Juan		71
+Victor		30
+

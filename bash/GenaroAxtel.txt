@@ -1,0 +1,14 @@
+function Write-Emails{
+	param([string]$emailsPath=$(throw "-emailsPath Param Required."),[string]$emailTargetPath=$(throw "-emailTargetPath Required."), [string]$fileTargetPath=$(throw "-fileTargetPath Required."))
+
+	gc $emailsPath | % {
+				$email = $_
+				gc $emailTargetPath | ? {$_.Split("`t")[5].Trim() -eq $email.Trim()}
+			} > $fileTargetPath
+}
+
+
+gc emails.txt | % {
+		$email = $_
+		gc Entrada.TSV | ? {$_.Split("`t")[5].Trim() -eq $email.Trim()}
+	} > Salida.Tsv

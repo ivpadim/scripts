@@ -1,0 +1,3 @@
+	Many events may occur on your Linux system that should be logged for administrative
+purposes. Linux uses the syslog system to display and record messages describing these events. This system allows finely controlled logging of messages from the kernel as well as processes running on your system and remote systems. Messages can be placed on the console display, in log files, and on the text screens of users logged in to the system.
+

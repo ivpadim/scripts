@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{94D665CA-D915-4DE1-AA53-913450A1AE2D}") = "Scripts", "Scripts.fsharpp", "{3237AE9C-57AD-453F-85EB-E5435139C416}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3237AE9C-57AD-453F-85EB-E5435139C416}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3237AE9C-57AD-453F-85EB-E5435139C416}.Debug|Win32.Build.0 = Debug|Win32
+		{3237AE9C-57AD-453F-85EB-E5435139C416}.Release|Win32.ActiveCfg = Release|Win32
+		{3237AE9C-57AD-453F-85EB-E5435139C416}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
