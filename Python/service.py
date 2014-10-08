@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 #Autor: Ivan Padron Dimas <ivpadim@gmail.com>
 #===========================================
 #This little script allows to receive commands
@@ -24,26 +26,26 @@ def send_key(key):
     commands.getoutput('xdotool key ' + key)
 
 #Searching and connecting to the service
-def wait_command():    
+def wait_command():
     print 'Creating service'
-    
+
     server = BluetoothSocket(RFCOMM)
-    
+
     server.bind(("",PORT_ANY))
     server.listen(1)
-    
+
     port = server.getsockname()[1]
-    
-    advertise_service( server, service_name, service_id = uuid, service_classes = [ uuid, SERIAL_PORT_CLASS ], 
+
+    advertise_service( server, service_name, service_id = uuid, service_classes = [ uuid, SERIAL_PORT_CLASS ],
     					profiles = [ SERIAL_PORT_PROFILE ] )
-    
+
     print 'Service %s created at port %d' % (service_name, port)
     print 'Waiting for connection...'
-    
+
     try:
 		client_sock, client_info = server.accept()
 		print 'Accepted connection from ', client_info
-		
+
 		while True:
 		    received_command = client_sock.recv(1024)
 		    data = received_command.split(':')
@@ -57,4 +59,4 @@ def wait_command():
 if __name__ == '__main__':
    	print_title()
    	while True:
-		wait_command()		
+		wait_command()
