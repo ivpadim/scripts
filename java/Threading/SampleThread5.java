@@ -4,7 +4,7 @@ public class SampleThread5 implements Runnable {
     // Punto de entrada principal
     public static void main (String [] args) {
         // La clase del programa compite consigo misma, utilizando dos Threads
-        Pry010ThreadsJava corredor = new Pry010ThreadsJava();
+        SampleThread5 corredor = new SampleThread5();
         // Se instancían dos Threads
         Thread uno = new Thread( corredor );
         Thread dos = new Thread( corredor);

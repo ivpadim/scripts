@@ -8,7 +8,7 @@ public class SampleThread6 implements Runnable {
 
     public static void main(String[] args) {
         // La clase del programa compite consigo misma, utilizando dos Threads
-        Pry011ThreadsJava corredor = new Pry011ThreadsJava();
+        SampleThread6 corredor = new SampleThread6();
         // Se instancían dos Threads
         Thread uno = new Thread(corredor);
         Thread dos = new Thread(corredor);
