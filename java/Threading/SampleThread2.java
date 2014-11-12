@@ -1,18 +1,32 @@
+public class SampleThread2 {
+   public static void main(String args[]) {
+   
+      RunnableDemo R1 = new RunnableDemo( "Thread-1");
+      R1.start();
+      
+      RunnableDemo R2 = new RunnableDemo( "Thread-2");
+      R2.start();
+
+      RunnableDemo R3 = new RunnableDemo( "Thread-3");
+      R3.start();
+   }   
+}
+
 class RunnableDemo implements Runnable {
    private Thread t;
    private String threadName;
    
    RunnableDemo( String name){
        threadName = name;
-       System.out.println("Creating " +  threadName );
+       //System.out.println("Creating " +  threadName );
    }
    public void run() {
-      System.out.println("Running " +  threadName );
+      //System.out.println("Running " +  threadName );
       try {
-         for(int i = 4; i > 0; i--) {
+         for(int i = 1; i <= 5; i++) {
             System.out.println("Thread: " + threadName + ", " + i);
             // Let the thread sleep for a while.
-            Thread.sleep(50);
+            Thread.sleep(300);
          }
      } catch (InterruptedException e) {
          System.out.println("Thread " +  threadName + " interrupted.");
@@ -22,7 +36,7 @@ class RunnableDemo implements Runnable {
    
    public void start ()
    {
-      System.out.println("Starting " +  threadName );
+      //System.out.println("Starting " +  threadName );
       if (t == null)
       {
          t = new Thread (this, threadName);
@@ -30,15 +44,4 @@ class RunnableDemo implements Runnable {
       }
    }
 
-}
-
-public class TestThread {
-   public static void main(String args[]) {
-   
-      RunnableDemo R1 = new RunnableDemo( "Thread-1");
-      R1.start();
-      
-      RunnableDemo R2 = new RunnableDemo( "Thread-2");
-      R2.start();
-   }   
 }
