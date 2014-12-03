@@ -1,0 +1,2 @@
+nasm -f elf -o helloworld.o helloworld.s
+ld helloworld.o -o helloworld

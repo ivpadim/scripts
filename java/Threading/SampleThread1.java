@@ -1,4 +1,4 @@
-public class TestThread1 {
+public class SampleThread1 {
 
     public static void main(String[] args) {
         /* Crear y nombrar cada Thread */
